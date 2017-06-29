@@ -3,17 +3,21 @@ body {
   width: 100vw;
 }
 .weather-container {
+  width: 300px;
   display: flex;
+  align-items: center;
   background-color: pink;
+  flex-direction: column;
 }
 main {
   background-color: green;
   display: flex;
   flex-direction: row;
-  /*flex-wrap: wrap;*/
+  flex-wrap: wrap;
+/*justify-content: space-between;*/
 }
 .map-container {
-  background-color: grey;
+
   display: flex;
 
 }
@@ -25,7 +29,21 @@ main {
   background-color: red;
 
 }
+.top-wrapper{
+  background-color: grey;
+  display: flex;
+  flex-direction: row;
 
+  /*justify-content: space-between;*/
+
+}
+.bottom-wrapper{
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
 header{
   background-color: blue;
 }
