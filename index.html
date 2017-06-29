@@ -7,6 +7,14 @@
     <title>Weather Box</title>
   </head>
   <body>
+    <div id="map" style="width: 400px; height: 300px;"></div>
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoidHJhcGZvenoiLCJhIjoiY2o0aW95NmtoMDdnYTMzbDhmNHJ1ejI3dCJ9.SgeYMi-v186-3gho5QUDqQ';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/dark-v9'
+    });
+    </script>
 
   </body>
 </html>
