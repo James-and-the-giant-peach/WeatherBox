@@ -5,6 +5,7 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css" rel="stylesheet" />
     <link rel="stylesheet" href="main.css">
+    <script src="app.js" charset="utf-8"></script>
     <title>Weather Box</title>
   </head>
   <body>
@@ -74,8 +75,23 @@
     mapboxgl.accessToken = 'pk.eyJ1IjoidHJhcGZvenoiLCJhIjoiY2o0aW95NmtoMDdnYTMzbDhmNHJ1ejI3dCJ9.SgeYMi-v186-3gho5QUDqQ';
     var map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/dark-v9'
+      style: 'mapbox://styles/mapbox/dark-v9',
+      interactive: true,
     });
+
+    map.on('click', (e) => {
+      console.log(e.lngLat);
+      console.log(e);
+      let coordinates = e.lngLat
+      let longitude = coordinates.lng
+      let latitude = coordinates.lat
+      console.log("lng= " + longitude, "lat= " + latitude);
+      const weatherUrl = `https://api.darksky.net/forecast/79fde32973c5a1aa460a2b1529c66e3a/${latitude},${longitude}`
+
+      console.log(weatherUrl);
+      });
+
+
     </script>
 
   </body>
