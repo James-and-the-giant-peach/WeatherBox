@@ -4,10 +4,64 @@
     <meta charset="utf-8">
     <script src="https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="main.css">
     <title>Weather Box</title>
   </head>
   <body>
-    <div id="map" style="width: 400px; height: 300px;"></div>
+    <header>
+      <h1>Weather Box <small>"weather data for all places"</small></h1>
+    </header>
+    <main>
+      <section class = "map-conatiner">
+
+    <div id="map" style="width: 900px; height: 600px;"></div>
+      </section>
+      <aside class="weather-container">
+        <h2>Weather Data</h2>
+        <section>
+          <h4>City</h4>
+          <p>Denver</p>
+        </section>
+        <section>
+          <h4>Temp</h4>
+          <p>90F</p>
+        </section>
+        <section>
+          <h4>Wind Speed</h4>
+          <p>6</p>
+        </section>
+        <section>
+          <h4>Current Conditions</h4>
+          <p>Partly Cloudy</p>
+        </section>
+        <section>
+          <h4>Chance it gon rain</h4>
+          <p>0%</p>
+        </section>
+        <section>
+          <h4>Humidity</h4>
+          <p>never humid here</p>
+        </section>
+
+      </aside>
+      <section class="drop-down">
+        <p>
+          Drop down goes here
+        </p>
+
+      </section>
+      <section class="logo-container">
+        <img src="" alt="Logo goes here">
+
+      </section>
+
+      </main>
+
+
+
+
+
+
     <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoidHJhcGZvenoiLCJhIjoiY2o0aW95NmtoMDdnYTMzbDhmNHJ1ejI3dCJ9.SgeYMi-v186-3gho5QUDqQ';
     var map = new mapboxgl.Map({
